@@ -1,0 +1,109 @@
+/*General rules*/
+/* FIRST VERSION
+$dark-background: #c39b8c;
+$medium-background: #e6dace;
+$light-background: #f4ece6;
+$blue-palette: #45afc4;
+$gray-text: rgb(34, 34, 34);
+$light-text: #ede7df;
+*/
+
+/*SECOND VERSION
+$dark-background: #f4978e;
+$medium-background: #fdceb8;
+$light-background: #ffe6d2;
+$blue-palette: #48bfe3;
+$gray-text: rgb(34, 34, 34);
+$light-text: #ede7df;
+*/
+
+$dark-background: #d0b8ac;
+$medium-background: #f3d8c7;
+$light-background: #fcefe4;
+$blue-palette: #48bfe3;
+$gray-text: rgb(34, 34, 34);
+$light-text: #fbfefb;
+
+$header1: 3.8rem;
+$header2: 5rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 1.8rem;
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: $header1;
+}
+
+li,
+button,
+label,
+input,
+a,
+p {
+  font-size: $text;
+  color: $gray-text;
+}
+
+h2 {
+  font-size: $header2;
+}
+
+h3 {
+  font-size: $header3;
+}
+
+h4,
+h5 {
+  font-size: $header4;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: $gray-text;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  background-color: lighten($light-background, 3%);
+  font-size: $text;
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  border: 1px solid $gray-text;
+  margin: 1rem;
+  color: $gray-text;
+
+  &:hover {
+    background-color: $blue-palette;
+    border: none;
+    color: $light-text;
+    cursor: pointer;
+    a {
+      color: $light-text;
+    }
+  }
+}

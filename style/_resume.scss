@@ -1,0 +1,58 @@
+/*Resume*/
+/*
+.main-resume li {
+  line-height: 4rem;
+  &::before {
+    content: "\2022";
+    color: $blue-palette;
+    font-weight: bold;
+    width: 1rem;
+  }
+}
+*/
+
+.main-resume h1 {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.experience,
+.education,
+.skills {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  @include flex(center, center, column);
+  h3 {
+    color: $blue-palette;
+  }
+  img {
+    width: 95%;
+    margin: auto;
+    padding-bottom: 5%;
+  }
+  p {
+    padding: 0 1rem 1rem 1rem;
+  }
+  li {
+    padding: 1rem;
+  }
+}
+
+.skill-list {
+  @include flex(center, center, row);
+  img {
+    width: 25px;
+  }
+}
+
+#univda-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}

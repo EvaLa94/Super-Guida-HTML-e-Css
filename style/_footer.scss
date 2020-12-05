@@ -1,0 +1,30 @@
+footer {
+  overflow: hidden;
+  height: 30%;
+}
+
+span.heart {
+  color: red;
+}
+
+footer.foot-bottom {
+  flex: 1 1 40rem;
+  @include flex(center, center, column);
+  border-top: 1px solid $dark-background;
+  padding-top: 2rem;
+}
+
+.foot-copy {
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.foot-links {
+  @include flex(center, center, row);
+
+  li {
+    width: 10rem;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+}

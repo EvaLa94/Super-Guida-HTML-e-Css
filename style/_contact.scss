@@ -1,0 +1,48 @@
+.main-form {
+  background-color: $medium-background;
+  height: 80vh;
+  @include flex(center, center, column);
+
+  form {
+    background-color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 80%;
+    max-width: 400px;
+    height: 90%;
+    @include flex(center, center, column);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    h3 {
+      text-align: center;
+    }
+  }
+
+  input {
+    border: none;
+    border-bottom: 2px solid $gray-text;
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $blue-palette;
+    }
+  }
+  textarea {
+    border: 2px solid $gray-text;
+    border-radius: 10px;
+    padding: 2rem;
+    &:focus {
+      outline: none;
+      border: 2px solid $blue-palette;
+    }
+  }
+
+  label,
+  input,
+  textarea {
+    display: block;
+    padding: 0.5rem 0rem;
+  }
+
+  .required {
+    color: $blue-palette;
+  }
+}
