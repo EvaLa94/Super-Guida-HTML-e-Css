@@ -5,6 +5,8 @@ const headName = document.querySelector(".head-name");
 const hardSkills = document.querySelector(".hard-skills-parent");
 const skillList = document.querySelectorAll(".skill-list");
 const progressBar = document.querySelectorAll(".progress");
+const burger = document.querySelector(".burger");
+const navLinks = document.querySelector(".nav-links");
 
 const hardSkillsArray = ["html", "css", "sass", "bootstrap", "javascript"];
 
@@ -19,10 +21,18 @@ headName.addEventListener("mouseleave", function () {
   headName.style.transform = "";
 });
 
-//Hard Skills animation
-hardSkills.addEventListener("click", function (e) {
-  removeActive(e);
-  toggleActive(e);
+// Hard Skills animation
+if (hardSkills) {
+  hardSkills.addEventListener("click", function (e) {
+    removeActive(e);
+    toggleActive(e);
+  });
+}
+
+// Burger Menu Animation
+burger.addEventListener("click", function (e) {
+  burger.classList.toggle("burger-active");
+  navLinks.classList.toggle("nav-links-active");
 });
 
 // FUNCTIONS

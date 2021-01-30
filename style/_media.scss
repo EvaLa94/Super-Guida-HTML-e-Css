@@ -38,42 +38,31 @@
     }
   }
 
-  .menu-check {
-    display: block;
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 100;
-  }
-
-  .menu-check:checked + .nav-links {
+  .nav-links-active {
     transform: translateX(-100%);
   }
 
-  .menu-check:checked ~ .burger span {
-    background: $light-text;
-  }
+  .burger-active {
+    & > span {
+      background: $light-text;
+    }
 
-  /* X Animation */
-  .menu-check:checked ~ .burger span:nth-child(1) {
-    transform: rotateZ(45deg) translateY(300%);
-  }
-  .menu-check:checked ~ .burger span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-check:checked ~ .burger span:nth-child(3) {
-    transform: rotateZ(-45deg) translateY(-300%);
+    /* X Animation */
+    & > span:nth-child(1) {
+      transform: rotateZ(45deg) translateY(300%);
+    }
+    & > span:nth-child(2) {
+      opacity: 0;
+    }
+    & > span:nth-child(3) {
+      transform: rotateZ(-45deg) translateY(-300%);
+    }
   }
 }
 
 /*Remove Hamburger dropdown for larger screen*/
 
 @media screen and (min-width: 800px) {
-  input.menu-check {
-    display: none;
-  }
   .head-name {
     text-align: center;
   }
