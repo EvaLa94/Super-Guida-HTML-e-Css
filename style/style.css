@@ -1,21 +1,5 @@
 /*Import*/
 /*General rules*/
-/* FIRST VERSION
-$dark-background: #c39b8c;
-$medium-background: #e6dace;
-$light-background: #f4ece6;
-$blue-palette: #45afc4;
-$gray-text: rgb(34, 34, 34);
-$light-text: #ede7df;
-*/
-/*SECOND VERSION
-$dark-background: #f4978e;
-$medium-background: #fdceb8;
-$light-background: #ffe6d2;
-$blue-palette: #48bfe3;
-$gray-text: rgb(34, 34, 34);
-$light-text: #ede7df;
-*/
 * {
   margin: 0;
   padding: 0;
@@ -262,17 +246,6 @@ div.main-card-footer ul li {
 }
 
 /*Resume*/
-/*
-.main-resume li {
-  line-height: 4rem;
-  &::before {
-    content: "\2022";
-    color: $blue-palette;
-    font-weight: bold;
-    width: 1rem;
-  }
-}
-*/
 .main-resume h1 {
   width: 90%;
   margin: auto;
@@ -288,7 +261,7 @@ div.main-card-footer ul li {
   background-color: white;
   -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  border-radius: 10px;
   margin-bottom: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,24 +284,10 @@ div.main-card-footer ul li {
   color: #48bfe3;
 }
 
-.experience img,
-.education img,
-.skills img {
-  width: 95%;
-  margin: auto;
-  padding-bottom: 5%;
-}
-
 .experience p,
 .education p,
 .skills p {
   padding: 0 1rem 1rem 1rem;
-}
-
-.experience li,
-.education li,
-.skills li {
-  padding: 1rem;
 }
 
 .skill-list {
@@ -357,6 +316,30 @@ div.main-card-footer ul li {
   border-radius: 50%;
 }
 
+.hard-skills-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  padding: 2rem;
+}
+
+#fuoco-e-fiamme-logo {
+  width: 95%;
+  margin: auto;
+  padding-bottom: 5%;
+}
+
 .main-projects,
 .main-resume {
   padding: 30px 0;
@@ -367,17 +350,29 @@ div.main-card-footer ul li {
 .img-wrapper {
   overflow: hidden;
   width: 95%;
-  border-radius: 20px;
+  border-radius: 10px;
+}
+
+.img-wrapper a {
+  display: block;
+  height: 40rem;
+  width: 50rem;
+}
+
+.img-wrapper a > img {
+  width: 100%;
+  height: auto;
 }
 
 .projects {
   width: 90%;
   max-width: 500px;
-  margin: auto;
+  margin: 0 auto 2rem auto;
+  padding-bottom: 2rem;
   background-color: white;
   -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,6 +391,7 @@ div.main-card-footer ul li {
 
 .projects h3 {
   color: #48bfe3;
+  padding: 1rem 0;
 }
 
 .projects img {
@@ -426,10 +422,6 @@ div.main-card-footer ul li {
           transform: scale(1.1);
 }
 
-.project-first {
-  margin-bottom: 20px;
-}
-
 .main-form {
   background-color: #f3d8c7;
   height: 80vh;
@@ -450,7 +442,7 @@ div.main-card-footer ul li {
 
 .main-form form {
   background-color: white;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 2rem;
   width: 80%;
   max-width: 400px;
@@ -798,5 +790,170 @@ footer.foot-bottom {
     -ms-grid-column-span: 2;
     grid-area: 3 / 2 / 4 / 4;
   }
+}
+
+.logo,
+.head-name {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+@-webkit-keyframes logo {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes logo {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.linkedin-icon:hover,
+.github-icon:hover {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+button {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.skill-logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+.progress {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+  background: linear-gradient(118deg, #48bfe3 0%, #c830b6 100%);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.progress::after {
+  content: "";
+  width: 10rem;
+  height: 1.5rem;
+  background-color: #f3eaea;
+  z-index: 2;
+  position: absolute;
+}
+
+.progress.html::after {
+  left: 60%;
+}
+
+.progress.css::after {
+  left: 60%;
+}
+
+.progress.sass::after {
+  left: 60%;
+}
+
+.progress.bootstrap::after {
+  left: 30%;
+}
+
+.progress.javascript::after {
+  left: 40%;
+}
+
+.skill-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skill-container > .skill-name {
+  font-size: 1px;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.skill-container.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.skill-container.active > .progress {
+  width: 10rem;
+  height: 1.5rem;
+  visibility: visible;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.skill-container.active > .skill-name {
+  font-size: 1.8rem;
+  visibility: visible;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.skill-container.active > .skill-logo {
+  width: 5rem;
+  height: 5rem;
 }
 /*# sourceMappingURL=style.css.map */

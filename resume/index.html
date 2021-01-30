@@ -14,7 +14,7 @@
       <div class="main-head">
         <div class="head-name">
           <a href="../index.html">
-            <img src="../icons/sakura.svg" alt="" />
+            <img class="logo" src="../icons/sakura.svg" alt="" />
             <h1>Eva Lateltin</h1>
             <h4>Full Stack Web Developer</h4>
           </a>
@@ -41,25 +41,39 @@
         <h1>Professional Skills</h1>
         <div class="hard-skills skills">
           <h3>Hard Skills</h3>
-          <p>
-            <ul class="skill-list">
-              <li><img src="../icons/html.png" alt="html-logo"></li>
-              <li>HTML</li>
-              <li><progress value = "50" max = "100"></li>
-            </ul>
+          <p>Click on each skill for more information</p>
+          <div class="hard-skills-parent">
+          <div class="html-container skill-container">
+              <img class="html-logo skill-logo" src="../icons/html.svg" alt="html-logo"></li>
+              <p class="skill-name html-name">HTML</p>
+              <div class="progress html html-progress"></div>
+          </div>
 
-            <ul class="skill-list">
-              <li><img src="../icons/css.png" alt="css-logo"></li>
-              <li>CSS</li>
-              <li><progress value = "50" max = "100"></li>
-            </ul>
+          <div class="css-container skill-container">
+              <img class="css-logo skill-logo" src="../icons/css.svg" alt="css-logo">
+              <p class="skill-name css-name">CSS</p>
+              <div class="progress css css-progress"></div>
+          </div>
 
-            <ul class="skill-list">
-              <li><img src="../icons/sass.png" alt="sass-logo"></li>
-              <li>SASS</li>
-              <li><progress value = "50" max = "100"></li>
-            </ul>
-          </p>
+          <div class="sass-container skill-container">
+              <img class="sass-logo skill-logo" src="../icons/sass.svg" alt="sass-logo">
+              <p class="skill-name sass-name">SASS</p>
+              <div class="progress sass sass-progress"></div>
+           </div>
+
+           <div class="bootstrap-container skill-container">
+            <img class="bootstrap-logo skill-logo" src="../icons/bootstrap.svg" alt="bootstrap-logo">
+            <p class="skill-name bootstrap-name">BOOTSTRAP</p>
+            <div class="progress bootstrap bootstrap-progress"></div>
+         </div>
+
+           <div class="javascript-container skill-container">
+            <img class="javascript-logo skill-logo" src="../icons/javascript.svg" alt="javascript-logo">
+            <p class="skill-name javascript-name">JAVASCRIPT</p>
+            <div class="progress javascript javascript-progress"></div>
+         </div>
+          </div>
+
         </div>
 
         <div class="soft-skills skills">
@@ -138,17 +152,19 @@
         <ul class="foot-links">
           <li>
             <a href="https://www.linkedin.com/in/eva-lateltin/" target="blank">
-              <img src="../icons/linkedin.svg" alt="linkedin-profile" />
+              <img class="linkedin-icon" src="../icons/linkedin.svg" alt="linkedin-profile" />
             </a>
           </li>
 
           <li>
             <a href="https://github.com/EvaLa94" target="blank">
-              <img src="../icons/github.svg" alt="github-profile" />
+              <img class="github-icon" src="../icons/github.svg" alt="github-profile" />
             </a>
           </li>
         </ul>
       </div>
     </footer>
+    <script src="../app.js"></script>
+
   </body>
 </html>

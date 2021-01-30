@@ -1,21 +1,4 @@
 /*General rules*/
-/* FIRST VERSION
-$dark-background: #c39b8c;
-$medium-background: #e6dace;
-$light-background: #f4ece6;
-$blue-palette: #45afc4;
-$gray-text: rgb(34, 34, 34);
-$light-text: #ede7df;
-*/
-
-/*SECOND VERSION
-$dark-background: #f4978e;
-$medium-background: #fdceb8;
-$light-background: #ffe6d2;
-$blue-palette: #48bfe3;
-$gray-text: rgb(34, 34, 34);
-$light-text: #ede7df;
-*/
 
 $dark-background: #d0b8ac;
 $medium-background: #f3d8c7;
@@ -23,6 +6,11 @@ $light-background: #fcefe4;
 $blue-palette: #48bfe3;
 $gray-text: rgb(34, 34, 34);
 $light-text: #fbfefb;
+$linear-color: linear-gradient(
+  118deg,
+  rgba(72, 191, 227, 1) 0%,
+  rgba(200, 48, 182, 1) 100%
+);
 
 $header1: 3.8rem;
 $header2: 5rem;

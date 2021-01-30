@@ -1,0 +1,127 @@
+// My name in the header
+.logo,
+.head-name {
+  transition: all 0.8s;
+}
+
+@keyframes logo {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Icons & buttons
+.linkedin-icon:hover,
+.github-icon:hover {
+  transition: all 0.8s;
+  transform: scale(1.1);
+}
+
+button {
+  transition: all 0.8s;
+}
+
+// SKILLS
+
+@mixin transition($duration) {
+  -webkit-transition: $duration;
+  -moz-transition: $duration;
+  -ms-transition: $duration;
+  -o-transition: $duration;
+  transition: $duration;
+}
+
+.skill-logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+// progress bars
+.progress {
+  justify-content: center;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+  background: $linear-color;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  @include transition(0.5s);
+
+  &::after {
+    content: "";
+    width: 10rem;
+    height: 1.5rem;
+    background-color: rgb(243, 234, 234);
+    z-index: 2;
+    position: absolute;
+  }
+
+  &.html::after {
+    left: 60%;
+  }
+
+  &.css::after {
+    left: 60%;
+  }
+
+  &.sass::after {
+    left: 60%;
+  }
+
+  &.bootstrap::after {
+    left: 30%;
+  }
+
+  &.javascript::after {
+    left: 40%;
+  }
+}
+
+.skill-container {
+  flex: 1;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > .skill-name {
+    font-size: 1px;
+    visibility: hidden;
+    @include transition(0.5s);
+    opacity: 0;
+  }
+
+  &.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include transition(0.5s);
+
+    & > .progress {
+      width: 10rem;
+      height: 1.5rem;
+      visibility: visible;
+      @include transition(0.5s);
+    }
+    & > .skill-name {
+      font-size: $text;
+      visibility: visible;
+      @include transition(0.5s);
+      opacity: 1;
+    }
+
+    & > .skill-logo {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+}
